@@ -5,7 +5,7 @@
 #include "RectanglePacker.h"
 
 #pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Werror=unused-function"
+#pragma GCC diagnostic ignored "-Wunused-function"
 
 namespace msdf_atlas {
 
