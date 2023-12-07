@@ -4,6 +4,9 @@
 #include <vector>
 #include "RectanglePacker.h"
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Werror=unused-function"
+
 namespace msdf_atlas {
 
 static void copyRectanglePlacement(Rectangle &dst, const Rectangle &src) {
@@ -59,3 +62,5 @@ std::pair<int, int> packRectangles(RectangleType *rectangles, int count, int pad
 }
 
 }
+
+#pragma GCC diagnostic pop
