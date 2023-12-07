@@ -116,12 +116,12 @@ target_compile_features(msdf-atlas-gen PUBLIC cxx_std_11)
 target_link_libraries(msdf-atlas-gen PRIVATE Threads::Threads PNG::PNG)
 target_link_libraries(msdf-atlas-gen PUBLIC msdfgen::msdfgen)
 
-if(BUILD_SHARED_LIBS AND WIN32)
-    target_compile_definitions(msdf-atlas-gen PRIVATE "MSDF_ATLAS_PUBLIC=__declspec(dllexport)")
-    target_compile_definitions(msdf-atlas-gen INTERFACE "MSDF_ATLAS_PUBLIC=__declspec(dllimport)")
-else()
-    target_compile_definitions(msdf-atlas-gen PUBLIC MSDF_ATLAS_PUBLIC=)
-endif()
+#if(BUILD_SHARED_LIBS AND WIN32)
+#    target_compile_definitions(msdf-atlas-gen PRIVATE "MSDF_ATLAS_PUBLIC=__declspec(dllexport)")
+#    target_compile_definitions(msdf-atlas-gen INTERFACE "MSDF_ATLAS_PUBLIC=__declspec(dllimport)")
+#else()
+#    target_compile_definitions(msdf-atlas-gen PUBLIC MSDF_ATLAS_PUBLIC=)
+#endif()
 
 # msdf-atlas-gen standalone executable
 if(MSDF_ATLAS_BUILD_STANDALONE)
